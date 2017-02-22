@@ -37,11 +37,17 @@ class TestApp < Minitest::Test
   end
 
   def test_post_to_age
-  	post '/age', age_input: 30, name: 'Dan'
+  	post '/age', :age_input => 30, :name_input => 'Dan'
   	follow_redirect!
   	assert(last_response.ok?)
   	assert(last_response.body.include?('30'))
+  end
 
+  def test_get_fav_num
+  	get '/fav_num?name=Dan&age=30'
+  	assert(last_response.ok?)
+  	assert(last_response.body.include?('Dan'))
+  	assert(last_response.body.include?('30'))
   end
 
 end
