@@ -54,4 +54,9 @@ class TestApp < Minitest::Test
   	assert(last_response.body.include?('<input type="number" name="num3_input">'))
   end
 
+  def test_post_to_fav_num
+  	post '/fav_num', age: 30, name: 'Dan', num1: 2, num2: 5, num3: 10
+  	assert(last_response.ok?) 	
+  end
+
 end
