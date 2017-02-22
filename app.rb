@@ -28,6 +28,15 @@ class PersonalDetailsApp < Sinatra::Base
 	end
 
 	post '/fav_num' do
+		age = params[:age]
+		name = params[:name]
+		num1 = params[:num1]
+		num2 = params[:num2]
+		num3 = params[:num3]
+		redirect '/final?age=' + age + '&name=' + name# + '&num1=' num1 + '&num2=' num2 + '&num3=' num3
+	end
+
+	get '/final' do
 	end
 
 end
