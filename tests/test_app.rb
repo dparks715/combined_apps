@@ -48,6 +48,10 @@ class TestApp < Minitest::Test
   	assert(last_response.ok?)
   	assert(last_response.body.include?('Dan'))
   	assert(last_response.body.include?('30'))
+  	assert(last_response.body.include?('<form action="nums" method="post">'))
+  	assert(last_response.body.include?('<input type="number" name="num1_input">'))
+  	assert(last_response.body.include?('<input type="number" name="num2_input">'))
+  	assert(last_response.body.include?('<input type="number" name="num3_input">'))
   end
 
 end
