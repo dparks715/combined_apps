@@ -33,10 +33,19 @@ class PersonalDetailsApp < Sinatra::Base
 		num1 = params[:num1]
 		num2 = params[:num2]
 		num3 = params[:num3]
-		redirect '/final?age=' + age + '&name=' + name# + '&num1=' num1 + '&num2=' num2 + '&num3=' num3
+		redirect '/final?name=' + name + '&age=' + age
 	end
 
 	get '/final' do
+		name = params[:name]
+		age = params[:age]
+		"#{name} and #{age}"
+		#erb :final, :locals => {name: name, age: age}	
 	end
+
+	# post '/final' do
+	# 	name = params[:name]
+	# 	age = params[:age]
+	# end
 
 end
