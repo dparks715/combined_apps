@@ -55,7 +55,7 @@ class TestApp < Minitest::Test
   end
 
   def test_post_to_fav_num
-  	post '/fav_num', :name => 'Dan', :age => 30
+  	post '/fav_num', :name => 'Dan', :age => 30, :num1 => 2, :num2 => 3, :num3 => 5
   	#follow_redirect!
   	assert(last_response.ok?)
   	assert(last_response.body.include?('Dan'))

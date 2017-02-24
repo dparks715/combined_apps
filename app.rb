@@ -33,13 +33,25 @@ class PersonalDetailsApp < Sinatra::Base
 		num1 = params[:num1]
 		num2 = params[:num2]
 		num3 = params[:num3]
+		sum = num1 + num2 + num3
+
+		results = 'less than'
+		if sum > age
+			results = 'greater than'
+		elsif sum == age
+			results = 'equal to'
+		else
+			results
+		end
 
 		erb :final, :locals => {
 			name: name,
 			age: age,
 			num1: num1,
 			num2: num2,
-			num3: num3
+			num3: num3,
+			sum: sum,
+			results: results
 		}
 	end
 end
