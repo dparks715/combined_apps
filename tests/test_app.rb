@@ -48,7 +48,7 @@ class TestApp < Minitest::Test
   	assert(last_response.ok?)
   	assert(last_response.body.include?('Dan'))
   	assert(last_response.body.include?('30'))
-  	assert(last_response.body.include?('<form action="nums" method="post">'))
+  	assert(last_response.body.include?('<form action="/fav_num" method="post">'))
   	assert(last_response.body.include?('<input type="number" name="num1_input">'))
   	assert(last_response.body.include?('<input type="number" name="num2_input">'))
   	assert(last_response.body.include?('<input type="number" name="num3_input">'))
@@ -56,10 +56,9 @@ class TestApp < Minitest::Test
 
   def test_post_to_fav_num
   	post '/fav_num', :name => 'Dan', :age => 30, :num1 => 2, :num2 => 3, :num3 => 5
-  	#follow_redirect!
   	assert(last_response.ok?)
   	assert(last_response.body.include?('Dan'))
-  	assert(last_response.body.include?('30'))	
+  	assert(last_response.body.include?('30'))
   end
 
 end

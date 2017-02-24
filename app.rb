@@ -1,6 +1,7 @@
 require 'sinatra'
 
 class PersonalDetailsApp < Sinatra::Base
+
 	get '/' do
 		erb :name
 	end
@@ -28,11 +29,11 @@ class PersonalDetailsApp < Sinatra::Base
 	end
 
 	post '/fav_num' do
-		age = params[:age]
+		age = params[:age].to_i
 		name = params[:name]
-		num1 = params[:num1]
-		num2 = params[:num2]
-		num3 = params[:num3]
+		num1 = params[:num1_input].to_i
+		num2 = params[:num2_input].to_i
+		num3 = params[:num3_input].to_i
 		sum = num1 + num2 + num3
 
 		results = 'less than'
