@@ -22,3 +22,8 @@
   padding: 10px 0;
   font-size: 24px;
 }
+
+#fav_table {
+  border-spacing: 10px 0;
+  font-size: 18px;
+}
