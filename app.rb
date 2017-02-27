@@ -5,6 +5,10 @@ require_relative 'class_isbn.rb'
 class PersonalDetailsApp < Sinatra::Base
 
 	get '/' do
+		erb :welcome
+	end
+
+	get '/name' do
 		erb :name
 	end
 
