@@ -1,0 +1,15 @@
+<head>
+<title>Check ISBN</title>
+	<body>
+	<h1 align = "center">Enter ISBN number.</h1><hr>
+	<center><h3><%=isbn_num%><%=message1%><%=results%><%=message2%></h3>
+		<form action='ISBN_num' method='POST'>
+			<input type='text' name='isbn_input' required><br><br>
+			<input type='submit' value='Submit ISBN'>
+		</form>
+		<a href='/ISBN_input'>Try New ISBN</a>
+		<br><br>
+	</center>
+	</body>
+</head>
+

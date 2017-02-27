@@ -1,7 +1,7 @@
 #head_text{
 	text-align:center;
-	color:blue;
-	background-color: yellow;
+	color:white;
+	background-color: black;
 }
 
 .center_text{
@@ -12,4 +12,13 @@
 	font-size: large;
 	font-weight: 600;
 	text-shadow: 3px 3px 2px black;
+}
+
+#table_format {
+  border-spacing: 50px 0;
+}
+
+.columns {
+  padding: 10px 0;
+  font-size: 24px;
 }
