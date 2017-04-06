@@ -1,0 +1,36 @@
+<html>
+<link rel="stylesheet" href="css/styles.css">
+
+<h1 class='title'>Tic Tac Toe</h1>
+<h2 class='title_2'>Please select player 1 and player 2</h2>
+	<form action='/select_players' method='post'>
+	<table>
+		<tr>
+			<td class='bold'>Player 1</td>
+			<td class='bold'>Player 2</td>
+		</tr>
+		<tr>
+			<td>
+				<select name='player1'>
+				    <option value='Human'>Human - X</option>
+				    <option value='Easy'>Easy - X</option>
+				    <option value='Medium'>Medium - X</option>
+				    <option value='Impossible!'>Impossible! - X</option>
+				</select>
+		    </td>
+
+		    <td>
+			    <select name='player2'>
+				    <option value='Human'>Human - O</option>
+				    <option value='Easy'>Easy - O</option>
+				    <option value='Medium'>Medium - O</option>
+				    <option value='Impossible!'>Impossible! - O</option>
+				    <input type="submit" value="Submit">
+				</select>
+		    </td>
+		</tr>
+	</table>
+		
+	</form>
+
+</html>
