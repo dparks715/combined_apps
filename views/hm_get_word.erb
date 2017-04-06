@@ -1,0 +1,11 @@
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+
+<h2>Hi <%=p1%> and <%=p2%></h2>
+<p><%=p1%>, please enter a word for <%=p2%> to guess.</p>
+<p>Use only capital and lowercase letters. No numbers, spaces, or symbols.</p>
+
+<form action='pregame' method='post'>
+	<input type='password' name='guess_word' required>
+	<input type='submit' value="Let's Play!">
+</form>
